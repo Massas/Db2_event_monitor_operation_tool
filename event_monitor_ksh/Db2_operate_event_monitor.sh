@@ -15,8 +15,14 @@
 # ７．イベントモニターのアウトプット削除
 # ８．スクリプト終了
 
+echo
+echo '#================================='
+echo '# operate_event_monitor.sh:START'
+echo '#================================='
+echo
+
 ### confファイル読み込み ###
-echo "confファイルを読み込む\n"
+echo "confファイルを読み込む"
 
 . ./Db2_operate_event_monitor.conf
 
@@ -33,42 +39,42 @@ select cmd in CREATE DROP START STOP CHECK FORMAT CLEAR QUIT
 do
 	case $cmd in
 		CREATE)
-			echo "イベントモニターを作成します\n"
+			echo "イベントモニターを作成します"
 			
 			create_event_monitor
 			;;
 		DROP)
-			echo "イベントモニターを削除します\n"
+			echo "イベントモニターを削除します"
 			
 			drop_event_monitor
 			;;
 		START)
-			echo "イベントモニターの起動を行います\n"
+			echo "イベントモニターの起動を行います"
 			
 			start_event_monitor
 			;;
 		STOP)
-			echo "イベントモニターの提訴を行います\n"
+			echo "イベントモニターの提訴を行います"
 			
 			stop_event_monitor
 			;;
 		CHECK)
-			echo "イベントモニターの設定・状況を確認します\n"
+			echo "イベントモニターの設定・状況を確認します"
 			
 			check_event_monitor
 			;;
 		FORMAT)
-			echo "イベントモニターのフォーマットを行います\n"
+			echo "イベントモニターのフォーマットを行います"
 			
 			format_event_monitor
 			;;
 		CLEAR)
-			echo "イベントモニターのアウトプットファイルを削除します\n"
+			echo "イベントモニターのアウトプットファイルを削除します"
 			
 			clear_event_monitor_files
 			;;
 		QUIT)
-			echo "スクリプトの処理を終了します\n"
+			echo "スクリプトの処理を終了します"
 			break
 			;;
 		*)
