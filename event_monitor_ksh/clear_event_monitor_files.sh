@@ -41,12 +41,25 @@ echo "アウトプット先ディレクトリ：$TARGET_DIR"
 
 cd $TARGET_DIR
 
-ls -l *.evt *.ctl *.fmt
-if [ $? -eq 0 ]; then
-    # ファイル削除
-    rm -f *.evt *.ctl *.fmt 
+# ファイル削除
+echo "ファイルがあれば削除する:*.evt *.ctl *.fmt"
+
+if [ -f *.evt ]; then
+    rm -f *.evt
 else
-    echo "File Not Found"
+    echo ""
+fi
+
+if [ -f *.ctl ]; then
+    rm -f *.ctl
+else
+    echo ""
+fi
+
+if [ -f *.fmt ]; then
+    rm -f *.fmt
+else
+    echo ""
 fi
 
 RET_CODE=$?
