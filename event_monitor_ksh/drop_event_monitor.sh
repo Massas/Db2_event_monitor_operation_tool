@@ -29,3 +29,12 @@ db2 "drop event monitor $1"
 RET_CODE=$?
 
 print_result $0 $RET_CODE
+
+if [ $RET_CODE -eq 0 ]
+then
+    echo "db2 commit"
+    db2 commit
+else
+    echo "db2 rollback"
+    db2 rollback
+fi

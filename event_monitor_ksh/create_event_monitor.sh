@@ -25,7 +25,6 @@ print_fundamental_information
 
 connect_to_database
 
-date >> create_event_monitor.txt
 echo "db2 \"create event monitor $1 for $2 write to file '$3' buffersize 50 maxfiles 100 maxfilesize 1000 append\""
 db2 "create event monitor $1 for $2 write to file '$3' buffersize 50 maxfiles 100 maxfilesize 1000 append" | tee create_event_monitor.txt
 
@@ -33,3 +32,12 @@ db2 "create event monitor $1 for $2 write to file '$3' buffersize 50 maxfiles 10
 RET_CODE=$?
 
 print_result $0 $RET_CODE
+
+if [ $RET_CODE -eq 0 ]
+then
+    echo "db2 commit"
+    db2 commit
+else
+    echo "db2 rollback"
+    db2 rollback
+fi

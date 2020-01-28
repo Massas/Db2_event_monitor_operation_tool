@@ -27,8 +27,8 @@ if [ $1 -eq 1 ]; then
 
 elif [ $1 -eq 2 ]; then
     # TARGETDIR
-    echo "db2 \"select substr(evmonname,1,30) as evmonname,substr(target,1,50) as targetdir from syscat.eventmonitors\""
-    db2 "select substr(evmonname,1,30) as evmonname,substr(target,1,50) as targetdir from syscat.eventmonitors"
+    echo "db2 \"select substr(evmonname,1,30) as evmonname,substr(target,1,100) as targetdir from syscat.eventmonitors\""
+    db2 "select substr(evmonname,1,30) as evmonname,substr(target,1,100) as targetdir from syscat.eventmonitors"
 
 elif [ $1 -eq 3 ]; then
     # ALL
