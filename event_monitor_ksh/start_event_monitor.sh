@@ -15,13 +15,13 @@ echo
 RET_CODE=""
 
 ### confファイル読み込み ###
-echo "confファイルを読み込む"
+echo "confファイルを読み込む" > /dev/null
 
 . ./Db2_operate_event_monitor.conf
 
 print_fundamental_information
 
-connect_to_database
+connect_to_database > /dev/null
 
 echo "db2 set event monitor $1 state 1"
 db2 set event monitor $1 state 1
