@@ -15,26 +15,31 @@ echo
 RET_CODE=""
 
 ### confファイル読み込み ###
-echo "confファイルを読み込む"
+echo "confファイルを読み込む" > /dev/null
 
 . ./Db2_operate_event_monitor.conf
 
 print_fundamental_information
 
-connect_to_database
+connect_to_database > /dev/null
 
-echo "db2 \"drop event monitor $1\""
+echo "db2 \"drop event monitor $1\"" > /dev/null
+echo "drop event monitor"
 db2 "drop event monitor $1"
 
 RET_CODE=$?
 
-print_result $0 $RET_CODE
-
 if [ $RET_CODE -eq 0 ]
 then
-    echo "db2 commit"
+    echo ""
+    echo "commitを発行する"
     db2 commit
+    echo ""
 else
-    echo "db2 rollback"
+    echo ""
+    echo "rollbackする"
     db2 rollback
+    echo ""
 fi
+
+print_result $0 $RET_CODE

@@ -22,7 +22,7 @@ echo '#================================='
 echo
 
 ### confファイル読み込み ###
-echo "confファイルを読み込む"
+echo "confファイルを読み込む" > /dev/null
 
 . ./Db2_operate_event_monitor.conf
 
@@ -40,36 +40,43 @@ do
 	case $cmd in
 		CREATE)
 			echo "イベントモニターを作成します"
+			echo ""
 			
 			create_event_monitor
 			;;
 		DROP)
 			echo "イベントモニターを削除します"
+			echo ""
 			
 			drop_event_monitor
 			;;
 		START)
 			echo "イベントモニターの起動を行います"
+			echo ""
 			
 			start_event_monitor
 			;;
 		STOP)
 			echo "イベントモニターの提訴を行います"
+			echo ""
 			
 			stop_event_monitor
 			;;
 		CHECK)
 			echo "イベントモニターの設定・状況を確認します"
+			echo ""
 			
 			check_event_monitor
 			;;
 		FORMAT)
 			echo "イベントモニターのフォーマットを行います"
+			echo ""
 			
 			format_event_monitor
 			;;
 		CLEAR)
 			echo "イベントモニターのアウトプットファイルを削除します"
+			echo ""
 			
 			clear_event_monitor_files
 			;;
