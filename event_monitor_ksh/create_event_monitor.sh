@@ -26,7 +26,7 @@ print_fundamental_information
 connect_to_database
 
 echo "db2 \"create event monitor $1 for $2 write to file '$3' buffersize 50 maxfiles 100 maxfilesize 1000 append\""
-db2 "create event monitor $1 for $2 write to file '$3' buffersize 50 maxfiles 100 maxfilesize 1000 append" | tee create_event_monitor.txt
+db2 "create event monitor $1 for $2 write to file '$3' buffersize 50 maxfiles 100 maxfilesize 1000 append"
 
 # 実行結果を保存
 RET_CODE=$?
