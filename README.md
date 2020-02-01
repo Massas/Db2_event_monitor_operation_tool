@@ -5,14 +5,15 @@
 機能は以下の８つです。
 Functions in this tool is below.
 
-1. イベントモニターの作成 (create your event monitor.)
-2. イベントモニターの削除 (drop your event monitor.)
-3. イベントモニターの起動 (start your event monitor.)
-4. イベントモニターの停止 (stop your event monitor.)
-5. イベントモニターの設定・状況確認 (check your event monitor.(e.g. STATUS))
-6. イベントモニターのフォーマット (format your event monitor's output)
-7. イベントモニターのアウトプット削除 (delete your event monitor's output)
-8. スクリプト終了 (quit this tool)
+1. [イベントモニターの作成 (create your event monitor.)](https://github.com/Massas/Db2_event_monitor_operation_tool/wiki/CREATE_EVENT_MONITOR)
+2. [イベントモニターの削除 (drop your event monitor.)](https://github.com/Massas/Db2_event_monitor_operation_tool/wiki/DROP_EVENT_MONITOR)
+3. [イベントモニターの起動 (start your event monitor.)](https://github.com/Massas/Db2_event_monitor_operation_tool/wiki/START_EVENT_MONITOR)
+4. [イベントモニターの停止 (stop your event monitor.)](https://github.com/Massas/Db2_event_monitor_operation_tool/wiki/STOP_EVENT_MONITOR)
+5. [イベントモニターの設定・状況確認 (check your event monitor.(e.g. STATUS))](https://github.com/Massas/Db2_event_monitor_operation_tool/wiki/CHECK_EVENT_MONITOR)
+6. [イベントモニターのフォーマット (format your event monitor's output)](https://github.com/Massas/Db2_event_monitor_operation_tool/wiki/FORMAT_EVENT_MONITOR)
+7. [イベントモニターのアウトプット削除 (delete your event monitor's output)](https://github.com/Massas/Db2_event_monitor_operation_tool/wiki/DELETE_OUTPUT)
+8. [スクリプト終了 (quit this tool)](https://github.com/Massas/Db2_event_monitor_operation_tool/wiki/QUIT_THIS_TOOL)
+
 
 ***
 
