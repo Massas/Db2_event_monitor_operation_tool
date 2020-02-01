@@ -46,8 +46,8 @@ echo "アウトプット先ディレクトリ：$TARGET_DIR"
 cd $TARGET_DIR
 
 echo "イベントモニター$NAMEのフォーマットを行う"
-echo "db2evmon -db KJDB -evm $NAME > $NAME.fmt" > /dev/null
-db2evmon -db KJDB -evm $NAME > $NAME.fmt
+echo "db2evmon -db $DBNAME -evm $NAME > $NAME.fmt" > /dev/null
+db2evmon -db $DBNAME -evm $NAME > $NAME.fmt
 
 cd $HOME_DIR
 rm -f target_dir_tmp.txt
