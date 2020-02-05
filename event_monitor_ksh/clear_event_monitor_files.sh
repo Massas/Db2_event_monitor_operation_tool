@@ -45,23 +45,16 @@ cd $TARGET_DIR
 # ファイル削除
 echo "ファイルが存在する場合、削除する:*.evt *.ctl *.fmt"
 
-if [ -f *.evt ]; then
-    rm -f *.evt
-else
-    echo "" > /dev/null
-fi
-
-if [ -f *.ctl ]; then
-    rm -f *.ctl
-else
-    echo "" > /dev/null
-fi
-
-if [ -f *.fmt ]; then
-    rm -f *.fmt
-else
-    echo "" > /dev/null
-fi
+# 削除したいファイルの拡張子を'in'の後に指定する
+for file_extension in evt ctl fmt
+    do
+        if [ -f *.${file_extension} ]; then
+            # 対象となる拡張子のファイルを削除する
+            rm -f *.${file_extension}
+        else
+            echo ""
+        fi
+    done
 
 RET_CODE=$?
 
